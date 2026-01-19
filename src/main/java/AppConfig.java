@@ -12,9 +12,10 @@ public class AppConfig {
         return helloWorld;
     }
 
-    @Bean(name="cat")
-    @Scope("prototype") // Магия создания нового объекта при каждом обращении
-    public Cat getCat() {
+    @Bean(name = "cat")
+    @Scope("prototype")
+    public Cat cat() {
         return new Cat();
     }
+
 }
